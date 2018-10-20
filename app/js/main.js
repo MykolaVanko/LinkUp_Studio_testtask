@@ -87,12 +87,15 @@
         $('.leave-feedback-photo img').remove();
 
         var input = $(this)[0];
+
         if (input.files && input.files[0]) {
             if (input.files[0].type.match('image.*')) {
                 var reader = new FileReader();
                 reader.onload = function (e) {
-                    $('.leave-feedback-photo').append('<img src="'+e.target.result+'" style="height: 100%"/></div>');
-                }
+                    console.log(e.srcElement.result);
+                    console.log(e.target.result);
+                    $('.leave-feedback-photo').append('<img src="'+e.target.result+'"/>');
+                };
                 reader.readAsDataURL(input.files[0]);
             } else {
                 console.log('Error1');
@@ -114,14 +117,14 @@
 
 
     $('.add-feeedback').on('click', function () {
-        let img = $('.leave-feedback-photo img');
+        let img = $('.leave-feedback-photo img').attr('src');
         let name = $('#name').val();
         let email = $('#email').val();
         let feedback = $('#new_feedback').val();
 
         //var require = /^[A-Za-z ]+$/;
 
-        if(name == '' || email == '' || feedback == ''){
+        if(name === '' || email === '' || feedback === ''){
             return false
         } else if (/^[A-Za-z\s]+$/.test(name) && /\S+@\S+\.\S+/.test(email)) {
             let feedbackDescription = $('<div class="feedback-text"></div>')
