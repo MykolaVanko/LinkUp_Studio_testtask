@@ -105,7 +105,7 @@
             <span>What our customers told about us</span>
         </div>
         <div class="feedback-slider">
-            <div class="arrow_l">
+            <div class="arrow_l" onclick="swipeLeft()">
                 <img src="img/L.png">
             </div>
             <div class="feedback-slider-container">
@@ -182,7 +182,7 @@
                     </div>
                 </div>
             </div>
-            <div class="arrow_r">
+            <div class="arrow_r" onclick="swipeRight()">
                 <img src="img/R.png">
             </div>
         </div>
@@ -198,7 +198,7 @@
             <div class="leave-feedback-user_name">
                 <input class="feedback-name-position" id="name" name="name" placeholder="Name" required>
                 <input class="feedback-name-position" id="email" name="email" placeholder="E-mail" required>
-                <input type="button" class="cancel-feedback" value="Cancel">
+                <input type="button" class="cancel-feedback" value="Cancel" onclick="clearFeedback()">
                 <input type="button" class="add-feeedback" value="Add">
                 <label>
                     <img src="img/if_179_Upload_183298.png" height="32" width="32"/>
