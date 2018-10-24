@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="app/css/main.css">
+    <title>Insta | Test</title>
+</head>
+<body>
+    <!--POST-->
+    <section class="wall">
+        <!--<div class="post">-->
+            <!--<div class="user">-->
+                <!--<div class="avatar">-->
+                    <!--<img src="app/img/user.png" alt="avatar"/>-->
+                    <!--<span class="user-name">Ivan Ivan</span>-->
+                <!--</div>-->
+                <!--<img class="dots" src="app/img/dots.png" height="16" width="16"/>-->
+                <!--<h5 class="delete-post hidden">Видалити</h5>-->
+            <!--</div>-->
+            <!--<div class="post-photo">-->
+                <!--<img src="app/img/pexels-photo-675949.jpeg" alt="forest"/>-->
+            <!--</div>-->
+            <!--<div class="post-options">-->
+                <!--<div class="like">-->
+                    <!--<img class="full hidden" src="app/img/if_heart-full.png" height="16" width="16" alt="heart"/>-->
+                    <!--<img class="empty" src="app/img/empty-heart.png" height="16" width="16" alt="heart"/>-->
+                <!--</div>-->
+                <!--<div class="add-comment">-->
+                    <!--<img src="app/img/comment.png" height="16" width="16"/>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<p class="font-w600"><span class="likes-counter">213 234</span> вподобань</p>-->
+            <!--<P class="post-descr">-->
+                <!--Lorem ipsum dolor sit amet.-->
+            <!--</P>-->
+            <!--<ul class="comments">-->
+                <!--<li>Lorem<span class="font-w400">ipsum dolor sit amet, consectetur.</span></li>-->
+                <!--<li>Lorem<span class="font-w400">ipsum dolor sit amet, consectetur.</span></li>-->
+                <!--<li>Lorem<span class="font-w400">ipsum dolor sit amet, consectetur.</span></li>-->
+            <!--</ul>-->
+            <!--<span class="show-more">... показати більше</span>-->
+            <!--<span class="date"> 18 годин тому</span>-->
+        <!--</div>-->
+    </section>
+
+    <!--ADD PHOTO-->
+    <div class="add-post-photo hidden">
+        <div class="photo-container">
+
+        </div>
+        <input id="description" type="text" name="description">
+        <div class="add-buttons">
+            <input class="cancel-btn" type="button" name="cancel" value="Скасувати" onclick="cancel()">
+            <input class="add-btn" type="button" name="addPost" value="Готово" onclick="confirmAddingPost()">
+        </div>
+    </div>
+
+    <section class="add-post">
+        <label id="new-post" for="photo">
+            <img src="app/img/if_plus-square_2561371.png" height="32" alt="addPhoto"/>
+        </label>
+        <input id="photo" type="file" name="photo" oninput="getPhoto()">
+    </section>
+
+
+
+<script src="app/js/main.js"></script>
+</body>
+</html>
